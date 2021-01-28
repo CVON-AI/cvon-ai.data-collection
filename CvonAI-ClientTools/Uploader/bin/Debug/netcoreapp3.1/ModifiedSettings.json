@@ -1,0 +1,59 @@
+{
+  "Sites": [
+    {
+      "Name": "MZH",
+      "StructuredModalityConfig": [],
+      "ImageModalityConfig": [
+        {
+          "BlindedAreas": [],
+          "ExportedAreas": [],
+          "Modality": 3,
+          "DataExportPath": null,
+          "RemotePath": null,
+          "ControllerTypeString": null
+        }
+      ]
+    },
+    {
+      "Name": "Rijnstate",
+      "StructuredModalityConfig": [],
+      "ImageModalityConfig": [
+        {
+          "BlindedAreas": [
+            {
+              "Left": 40,
+              "Top": 40,
+              "Width": 200,
+              "Height": 50
+            }
+          ],
+          "ExportedAreas": [],
+          "Modality": 3,
+          "DataExportPath": null,
+          "RemotePath": null,
+          "ControllerTypeString": null
+        }
+      ]
+    },
+    {
+      "Name": "AMC",
+      "StructuredModalityConfig": [],
+      "ImageModalityConfig": [
+        {
+          "BlindedAreas": [],
+          "ExportedAreas": [],
+          "Modality": 3,
+          "DataExportPath": "D:\\RACE-V\\",
+          "RemotePath": "${project_path}/RACE-V/Echo",
+          "ControllerTypeString": "Uploader.Logic.Controllers.GoogleUploadController"
+        }
+      ]
+    }
+  ],
+  "Modalities": [
+    3,
+    0
+  ],
+  "RemotePath": "gs://cvon-ai-data",
+  "Name": "ModifiedName"
+}

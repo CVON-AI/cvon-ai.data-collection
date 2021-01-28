@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <Deterministic>False</Deterministic>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <Version>1.0</Version>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="fo-dicom.NetCore" Version="4.0.4" />
+        <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.8">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.2" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="3.1.2" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.2" />
+        <PackageReference Include="System.CommandLine.DragonFruit" Version="0.3.0-alpha.20104.2" />
+        <PackageReference Include="Unity" Version="5.11.3" />
+        <PackageReference Include="Unity.Configuration" Version="5.11.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Uploader.Logic\Uploader.Logic.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="appsettings.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="ProjectSettings.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
+</Project>

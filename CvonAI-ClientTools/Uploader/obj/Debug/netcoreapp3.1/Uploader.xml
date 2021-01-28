@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Uploader</name>
+    </assembly>
+    <members>
+        <member name="M:Uploader.Program.Main(Uploader.Logic.Config.Modality,Uploader.Logic.Actions.Action)">
+            <summary>
+            Converts an image file from one format to another.
+            </summary>
+            <param name="scannedModality">The modality for which an action needs to be taken.</param>
+            <param name="actionToPerform">The action to perform on the modality.</param>
+        </member>
+    </members>
+</doc>

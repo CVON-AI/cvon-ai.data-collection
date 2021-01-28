@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Uploader": {
+      "commandName": "Project",
+      "commandLineArgs": "--scanned-modality MRI --action-to-perform ApplyCorrections"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+D:\Development-Git\Repos\cvon-ai\client_tools\CvonAI-ClientTools\Uploader\bin\Debug\netcoreapp2.0\Uploader.deps.json
+D:\Development-Git\Repos\cvon-ai\client_tools\CvonAI-ClientTools\Uploader\bin\Debug\netcoreapp2.0\Uploader.runtimeconfig.json
+D:\Development-Git\Repos\cvon-ai\client_tools\CvonAI-ClientTools\Uploader\bin\Debug\netcoreapp2.0\Uploader.runtimeconfig.dev.json
+D:\Development-Git\Repos\cvon-ai\client_tools\CvonAI-ClientTools\Uploader\bin\Debug\netcoreapp2.0\Uploader.dll
+D:\Development-Git\Repos\cvon-ai\client_tools\CvonAI-ClientTools\Uploader\bin\Debug\netcoreapp2.0\Uploader.pdb
+D:\Development-Git\Repos\cvon-ai\client_tools\CvonAI-ClientTools\Uploader\obj\Debug\netcoreapp2.0\Uploader.csprojResolveAssemblyReference.cache
+D:\Development-Git\Repos\cvon-ai\client_tools\CvonAI-ClientTools\Uploader\obj\Debug\netcoreapp2.0\Uploader.csproj.CoreCompileInputs.cache
+D:\Development-Git\Repos\cvon-ai\client_tools\CvonAI-ClientTools\Uploader\obj\Debug\netcoreapp2.0\Uploader.AssemblyInfoInputs.cache
+D:\Development-Git\Repos\cvon-ai\client_tools\CvonAI-ClientTools\Uploader\obj\Debug\netcoreapp2.0\Uploader.AssemblyInfo.cs
+D:\Development-Git\Repos\cvon-ai\client_tools\CvonAI-ClientTools\Uploader\obj\Debug\netcoreapp2.0\Uploader.dll
+D:\Development-Git\Repos\cvon-ai\client_tools\CvonAI-ClientTools\Uploader\obj\Debug\netcoreapp2.0\Uploader.pdb

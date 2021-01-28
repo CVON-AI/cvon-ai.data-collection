@@ -1,0 +1,168 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Development-Git\\Repos\\cvon-ai-repos\\cvon-ai.data-collection\\CvonAI-ClientTools\\ConfigBuilder\\ConfigBuilder.csproj": {}
+  },
+  "projects": {
+    "D:\\Development-Git\\Repos\\cvon-ai-repos\\cvon-ai.data-collection\\CvonAI-ClientTools\\ConfigBuilder\\ConfigBuilder.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Development-Git\\Repos\\cvon-ai-repos\\cvon-ai.data-collection\\CvonAI-ClientTools\\ConfigBuilder\\ConfigBuilder.csproj",
+        "projectName": "ConfigBuilder",
+        "projectPath": "D:\\Development-Git\\Repos\\cvon-ai-repos\\cvon-ai.data-collection\\CvonAI-ClientTools\\ConfigBuilder\\ConfigBuilder.csproj",
+        "packagesPath": "C:\\Users\\benzh\\.nuget\\packages\\",
+        "outputPath": "D:\\Development-Git\\Repos\\cvon-ai-repos\\cvon-ai.data-collection\\CvonAI-ClientTools\\ConfigBuilder\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\benzh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "D:\\Development-Git\\Repos\\cvon-ai-repos\\cvon-ai.data-collection\\CvonAI-ClientTools\\Uploader.Logic\\Uploader.Logic.csproj": {
+                "projectPath": "D:\\Development-Git\\Repos\\cvon-ai-repos\\cvon-ai.data-collection\\CvonAI-ClientTools\\Uploader.Logic\\Uploader.Logic.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Unity.Configuration": {
+              "target": "Package",
+              "version": "[5.11.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.405\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Development-Git\\Repos\\cvon-ai-repos\\cvon-ai.data-collection\\CvonAI-ClientTools\\Uploader.Logic\\Uploader.Logic.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Development-Git\\Repos\\cvon-ai-repos\\cvon-ai.data-collection\\CvonAI-ClientTools\\Uploader.Logic\\Uploader.Logic.csproj",
+        "projectName": "Uploader.Logic",
+        "projectPath": "D:\\Development-Git\\Repos\\cvon-ai-repos\\cvon-ai.data-collection\\CvonAI-ClientTools\\Uploader.Logic\\Uploader.Logic.csproj",
+        "packagesPath": "C:\\Users\\benzh\\.nuget\\packages\\",
+        "outputPath": "D:\\Development-Git\\Repos\\cvon-ai-repos\\cvon-ai.data-collection\\CvonAI-ClientTools\\Uploader.Logic\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\benzh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.CodeAnalysis.FxCopAnalyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.9.8, )"
+            },
+            "NLog": {
+              "target": "Package",
+              "version": "[4.6.8, )"
+            },
+            "SixLabors.ImageSharp": {
+              "target": "Package",
+              "version": "[1.0.0-beta0007, )"
+            },
+            "SixLabors.ImageSharp.Drawing": {
+              "target": "Package",
+              "version": "[1.0.0-beta0007, )"
+            },
+            "Unity": {
+              "target": "Package",
+              "version": "[5.11.3, )"
+            },
+            "Unity.Configuration": {
+              "target": "Package",
+              "version": "[5.11.1, )"
+            },
+            "fo-dicom": {
+              "target": "Package",
+              "version": "[4.0.4, )"
+            },
+            "fo-dicom.NetCore": {
+              "target": "Package",
+              "version": "[4.0.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.405\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

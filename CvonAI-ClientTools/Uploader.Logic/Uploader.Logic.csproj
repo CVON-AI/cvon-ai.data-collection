@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+      <!--TargetFramework>netstandard2.1</TargetFramework-->
+      <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="DicomProcessors\DicomFileRegistrationBasedValidator.cs" />
+    <Compile Remove="DicomProcessors\FileIntegrityValidator.cs" />
+    <Compile Remove="DicomProcessors\ImageValidationPropertyKeys.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="fo-dicom" Version="4.0.4" />
+    <PackageReference Include="fo-dicom.NetCore" Version="4.0.4" />
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="NLog" Version="4.6.8" />
+    <PackageReference Include="SixLabors.ImageSharp" Version="1.0.0-beta0007" />
+    <PackageReference Include="SixLabors.ImageSharp.Drawing" Version="1.0.0-beta0007" />
+    <PackageReference Include="Unity" Version="5.11.3" />
+    <PackageReference Include="Unity.Configuration" Version="5.11.1" />
+  </ItemGroup>
+
+</Project>
