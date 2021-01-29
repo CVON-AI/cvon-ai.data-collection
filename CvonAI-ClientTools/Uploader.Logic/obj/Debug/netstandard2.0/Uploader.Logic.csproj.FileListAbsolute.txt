@@ -1,8 +1,0 @@
-D:\Development-Git\Repos\cvon-ai\client_tools\CvonAI-ClientTools\Uploader.Logic\bin\Debug\netstandard2.0\Uploader.Logic.deps.json
-D:\Development-Git\Repos\cvon-ai\client_tools\CvonAI-ClientTools\Uploader.Logic\bin\Debug\netstandard2.0\Uploader.Logic.dll
-D:\Development-Git\Repos\cvon-ai\client_tools\CvonAI-ClientTools\Uploader.Logic\bin\Debug\netstandard2.0\Uploader.Logic.pdb
-D:\Development-Git\Repos\cvon-ai\client_tools\CvonAI-ClientTools\Uploader.Logic\obj\Debug\netstandard2.0\Uploader.Logic.csprojAssemblyReference.cache
-D:\Development-Git\Repos\cvon-ai\client_tools\CvonAI-ClientTools\Uploader.Logic\obj\Debug\netstandard2.0\Uploader.Logic.AssemblyInfoInputs.cache
-D:\Development-Git\Repos\cvon-ai\client_tools\CvonAI-ClientTools\Uploader.Logic\obj\Debug\netstandard2.0\Uploader.Logic.AssemblyInfo.cs
-D:\Development-Git\Repos\cvon-ai\client_tools\CvonAI-ClientTools\Uploader.Logic\obj\Debug\netstandard2.0\Uploader.Logic.dll
-D:\Development-Git\Repos\cvon-ai\client_tools\CvonAI-ClientTools\Uploader.Logic\obj\Debug\netstandard2.0\Uploader.Logic.pdb
