@@ -7,6 +7,9 @@ using Uploader.Logic.DicomProcessors;
 
 namespace Uploader.Logic.Actions
 {
+    /// <summary>
+    /// Validates all DICOM files found in a given directory.
+    /// </summary>
     internal class LocalDirValidator : ActionBase, IAction
     {
         public LocalDirValidator(Site siteConfiguration, Modality modality) : base(siteConfiguration, modality)

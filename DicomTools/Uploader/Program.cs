@@ -55,7 +55,13 @@ namespace Uploader
             ProjectSettings settings = projectSettingsController.ReadFromFile(@".\ProjectSettings.json");
             Site siteConfiguration = settings?.Sites.FirstOrDefault(s => s.IsCurrent);
 
-            string resultsFile = Path.Combine(DependencyInjector.Resolve<IStorageSettingsProvider>().GetProcessedFolder(), scannedModality.ToString(), siteConfiguration.Name, DateTime.UtcNow.ToString().Replace(":", string.Empty) + ".txt");
+            IStorageSettingsProvider storageSettingsProvider = DependencyInjector.Resolve<IStorageSettingsProvider>();
+            
+            if (storageSettingsProvider == null)
+            {
+                return;
+            }
+            string resultsFile = Path.Combine(storageSettingsProvider.GetProcessedFolder(), scannedModality.ToString(), siteConfiguration.Name, DateTime.UtcNow.ToString().Replace(":", string.Empty) + ".txt");
             FileOutputController.FileName = resultsFile;
             
             IAction action = ActionProvider.GetAction(actionToPerform, scannedModality, siteConfiguration);

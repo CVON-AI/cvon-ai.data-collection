@@ -25,4 +25,9 @@
     <PackageReference Include="Unity.Configuration" Version="5.11.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Config\ProjectSettings\" />
+    <Folder Include="Controllers\IO\" />
+  </ItemGroup>
+
 </Project>

@@ -6,7 +6,8 @@ using Uploader.Logic.Providers;
 namespace Uploader.Logic.Controllers
 {
     /// <summary>
-    /// Wrapper for unity configuration. Provides unity based instantiation of types
+    /// Wrapper for unity inversion of control (dependency injection) configuration. 
+    /// Provides unity based instantiation of types
     /// </summary>
     internal static class DependencyInjector
     {
@@ -28,6 +29,8 @@ namespace Uploader.Logic.Controllers
                     {
                         // todo: log e
                         PrivateContainer.RegisterType(typeof(IStorageSettingsProvider), typeof(BenzhiDummyStorageSettingsProvider));
+                        PrivateContainer.RegisterType(typeof(IIOController), typeof(IOControllerWrapper));
+
                     }
                 }
                 return PrivateContainer;

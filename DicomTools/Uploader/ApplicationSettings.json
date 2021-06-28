@@ -1,0 +1,13 @@
+{
+    "Unity": {
+        "Registrations": {
+            "IIOController": "IOControllerWrapper"
+        },
+        "Aliases": {
+            "IIOController": "Uploader.Logic.Controllers.IIOController",
+            "IOControllerWrapper": "Uploader.Logic.Controllers.IOControllerWrapper"
+        }
+
+    }
+
+}
