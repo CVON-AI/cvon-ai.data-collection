@@ -4,8 +4,8 @@
             "IIOController": "IOControllerWrapper"
         },
         "Aliases": {
-            "IIOController": "Uploader.Logic.Controllers.IIOController",
-            "IOControllerWrapper": "Uploader.Logic.Controllers.IOControllerWrapper"
+            "IIOController": "Uploader.Logic.Controllers.IIOController, Uploader.Logic",
+            "IOControllerWrapper": "Uploader.Logic.Controllers.IOControllerWrapper, Uploader.Logic"
         }
 
     }

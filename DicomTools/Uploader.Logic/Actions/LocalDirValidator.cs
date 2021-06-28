@@ -18,19 +18,21 @@ namespace Uploader.Logic.Actions
 
         protected override void DoPerform(Dictionary<string, List<string>> paths)
         {
-            new IOControllerWrapper().WriteLine($"Validating local files in folders {string.Join(", ", paths.Keys)}");
+            IIOController ioController = DependencyInjector.Resolve<IIOController>() ?? new IOControllerWrapper();
+
+            ioController.WriteLine($"Validating local files in folders {string.Join(", ", paths.Keys)}");
 
             // todo, make a proper bridge to the wrapper, run it with all files!
             var result = ImageValidatorWrapper.Validate(this.SiteSettings, this.Modality, paths.SelectMany(p => p.Value));
 
             if (result.Value)
             {
-                new IOControllerWrapper().WriteLine("All DICOMS were valid");
+                ioController.WriteLine("All DICOMS were valid");
             }
             else
             {
-                new IOControllerWrapper().WriteLine("Following validation errors occurred reading DICOM files:");
-                new IOControllerWrapper().WriteLine(result.TechnicalInformation);
+                ioController.WriteLine("Following validation errors occurred reading DICOM files:");
+                ioController.WriteLine(result.TechnicalInformation);
             }
         }
     }

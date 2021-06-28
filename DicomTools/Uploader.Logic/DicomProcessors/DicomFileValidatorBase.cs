@@ -96,7 +96,7 @@ namespace Uploader.Logic.DicomProcessors
             try
             {
                 // TODO: write all terminal text also to a file!
-                new IOControllerWrapper().WriteLine($"Moving {imageFileName} to {destinationFolder}");
+                (DependencyInjector.Resolve<IIOController>() ?? new IOControllerWrapper()).WriteLine($"Moving {imageFileName} to {destinationFolder}");
                 File.Move(imageFileName, destinationFileName);
             }
             catch (System.Exception ex)

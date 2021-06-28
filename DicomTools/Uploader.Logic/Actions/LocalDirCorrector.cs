@@ -15,16 +15,18 @@ namespace Uploader.Logic.Actions
 
         protected override void DoPerform(Dictionary<string, List<string>> paths)
         {
+            IIOController ioController = DependencyInjector.Resolve<IIOController>() ?? new IOControllerWrapper();
+
             var result = ImageValidatorWrapper.CorrectFiles(this.SiteSettings, this.Modality, paths.SelectMany(p => p.Value));
 
             if (result.Value)
             {
-                new IOControllerWrapper().WriteLine("All DICOMS were valid");
+                ioController.WriteLine("All DICOMS were valid");
             }
             else
             {
-                new IOControllerWrapper().WriteLine("Following validation errors occurred reading DICOM files:");
-                new IOControllerWrapper().WriteLine(result.TechnicalInformation);
+                ioController.WriteLine("Following validation errors occurred reading DICOM files:");
+                ioController.WriteLine(result.TechnicalInformation);
             }
         }
     }

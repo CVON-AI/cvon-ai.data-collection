@@ -24,26 +24,29 @@ namespace Uploader.Logic.Actions
         protected override void DoPerform(Dictionary<string, List<string>> paths)
         {
             string pathPrefix = new string(' ', 4);
+            IIOController ioController = DependencyInjector.Resolve<IIOController>() ?? new IOControllerWrapper();
 
             foreach (string path in paths.Keys)
             {
-                new IOControllerWrapper().WriteLine(path);
+                ioController.WriteLine(path);
                 foreach (string filename in paths[path])
                 {
                     FileInfo info = new FileInfo(filename);
-                    new IOControllerWrapper().WriteLine("{0}{1}", pathPrefix, info.Name);
+                    ioController.WriteLine("{0}{1}", pathPrefix, info.Name);
                 }
             }
         }
 
         private void ShowPath(string localPath, int depth = 0)
         {
+            IIOController ioController = DependencyInjector.Resolve<IIOController>() ?? new IOControllerWrapper();
             string pathPrefix = new string(' ', depth * 4);
-            new IOControllerWrapper().WriteLine(localPath);
+            ioController.WriteLine(localPath);
+         
             foreach (string filename in Directory.EnumerateFiles(localPath))
             {
                 FileInfo info = new FileInfo(filename);
-                new IOControllerWrapper().WriteLine("{0}{1}", pathPrefix, info.Name);
+                ioController.WriteLine("{0}{1}", pathPrefix, info.Name);
             }
 
             foreach (string directoryName in Directory.EnumerateDirectories(localPath))

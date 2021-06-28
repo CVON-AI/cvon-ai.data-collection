@@ -26,6 +26,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Config\ApplicationSettings\" />
     <Folder Include="Config\ProjectSettings\" />
     <Folder Include="Controllers\IO\" />
   </ItemGroup>

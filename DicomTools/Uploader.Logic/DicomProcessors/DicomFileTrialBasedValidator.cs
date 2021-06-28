@@ -391,10 +391,13 @@ namespace Uploader.Logic.DicomProcessors
 
         private object GetTagValueForStudy(DicomDataset dicomDataset, string label, DicomTag tag, string fileName, Dictionary<DicomTag, object> currentStudy, string referencePattern = null)
         {
+            IIOController ioController = DependencyInjector.Resolve<IIOController>() ?? new IOControllerWrapper();
+
             while (!currentStudy.ContainsKey(tag))
             {
+
                 string PatientID = dicomDataset.GetString(DicomTag.PatientID) ?? "UNKNOWN";
-                new IOControllerWrapper().WriteLine($"Please add a value for {label} in file fileName: {fileName}, patientId: {PatientID}. Apply with Enter");
+                ioController.WriteLine($"Please add a value for {label} in file fileName: {fileName}, patientId: {PatientID}. Apply with Enter");
                 string value = Console.ReadLine();
 
                 if (tag == DicomTag.PatientWeight || tag == DicomTag.PatientSize)
@@ -405,7 +408,7 @@ namespace Uploader.Logic.DicomProcessors
                     }
                     catch (Exception)
                     {
-                        new IOControllerWrapper().WriteLine("That was not a number. Please, try again");
+                        ioController.WriteLine("That was not a number. Please, try again");
                         throw;
                     }
                 }
@@ -415,7 +418,7 @@ namespace Uploader.Logic.DicomProcessors
 
                     if (!regex.IsMatch(value))
                     {
-                        new IOControllerWrapper().WriteLine($"'{value}' does not match pattern '{referencePattern}'. Please try again");
+                        ioController.WriteLine($"'{value}' does not match pattern '{referencePattern}'. Please try again");
                     }
                     else
                     {

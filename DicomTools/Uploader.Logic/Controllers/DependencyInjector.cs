@@ -1,7 +1,11 @@
 ﻿using Microsoft.Practices.Unity.Configuration;
 using System;
+using System.IO;
 using Unity;
 using Uploader.Logic.Providers;
+using System.Text.Json;
+using Uploader.Logic.Config;
+using System.Collections.Generic;
 
 namespace Uploader.Logic.Controllers
 {
@@ -22,7 +26,18 @@ namespace Uploader.Logic.Controllers
 
                     try
                     {
-                        PrivateContainer.LoadConfiguration();
+                        var jsonString = File.ReadAllText(@".\ApplicationSettings.json");
+                        ApplicationSettings settings =  JsonSerializer.Deserialize<ApplicationSettings>(jsonString);
+                        Dictionary<Type, Type> typedRegistrations = settings?.Unity?.TypedRegistrations;
+
+                        if (typedRegistrations != null)
+                        {
+                            foreach (Type abstraction in typedRegistrations.Keys)
+                            {
+                                //PrivateContainer.LoadConfiguration();
+                                PrivateContainer.RegisterType(abstraction, typedRegistrations[abstraction]);
+                            }
+                        }
 
                     }
                     catch (Exception e)

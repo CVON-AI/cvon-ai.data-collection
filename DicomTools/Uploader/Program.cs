@@ -30,10 +30,11 @@ namespace Uploader
 
             bool execute = true;
             var helpBuilder = new System.CommandLine.Help.HelpBuilder(new SystemConsole());
+            IIOController ioController = DependencyInjector.Resolve<IIOController>() ?? new IOControllerWrapper();
 
             if (scannedModality == Modality.None)
             {
-                new IOControllerWrapper().WriteLine("Modality is missing");
+                ioController.WriteLine("Modality is missing");
                 
                 helpBuilder.Write(new Command("modality", "The modality for which an action needs to be taken"));
                 execute = false;
@@ -41,7 +42,7 @@ namespace Uploader
 
             if (actionToPerform == Action.None)
             {
-                new IOControllerWrapper().WriteLine("Action is missing");
+                ioController.WriteLine("Action is missing");
                 helpBuilder.Write(new Command("actionToPerform", "The action to perform on the modality"));
                 execute = false;
             }
@@ -69,14 +70,14 @@ namespace Uploader
 
             if (!actionResult.Succeeded)
             {
-                new IOControllerWrapper().WriteLine("Action failed: {0} for site {1} and modality {2}", actionToPerform, siteConfiguration?.Name ?? "<SITE-NOT-CONFIGURED>", scannedModality);
-                new IOControllerWrapper().WriteLine("Cause of failue:");
-                new IOControllerWrapper().WriteLine(actionResult.CauseOfFailure);
+                ioController.WriteLine("Action failed: {0} for site {1} and modality {2}", actionToPerform, siteConfiguration?.Name ?? "<SITE-NOT-CONFIGURED>", scannedModality);
+                ioController.WriteLine("Cause of failue:");
+                ioController.WriteLine(actionResult.CauseOfFailure);
             }
 
             // File.WriteAllText(resultsFile, $"{actionResult.Succeeded}\r\n{(actionResult.Succeeded ? "" : actionResult.CauseOfFailure)}");
             // test to rewrite the configuration
-            // new IOControllerWrapper().WriteLine(projectSettingsController.GetJson(settings));
+            // iOController.WriteLine(projectSettingsController.GetJson(settings));
             // settings.Name = "ModifiedName";
             // projectSettingsController.WriteToFile(settings, @".\ModifiedSettings.json");
             Console.ReadKey(true);

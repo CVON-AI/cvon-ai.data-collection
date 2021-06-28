@@ -81,7 +81,7 @@ namespace ConfigBuilder
             };
 
             // Use writeintended for whitespaces
-            new IOControllerWrapper().WriteLine(new ProjectSettingsProvider().GetJson(settings));
+            (DependencyInjector.Resolve<IIOController>() ?? new IOControllerWrapper()).WriteLine(new ProjectSettingsProvider().GetJson(settings));
             Console.ReadKey(true);
         }
     }
